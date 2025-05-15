@@ -29,7 +29,7 @@ while gameplay == True:
     
     betAmount = int(betAmount)
     
-    print("\nGame modes\n1. Coin Flip\n2. Jackpot\n3. Omega Jackpot")
+    print("\nGame modes\n1. Coin Flip\n2. Jackpot\n3. Omega Jackpot\n4. Job")
     gameType = input("Please select a game mode by number: ")
     
     typeCheck = False
@@ -96,7 +96,18 @@ while gameplay == True:
             else:
                 balance = int(balance-betAmount)
                 print(f"\nYou lost. Your balance is now {balance}.\n")
-                
+        elif gameType == "4":
+
+            typeCheck = True 
+
+            jobValue = int(random.randrange(1,1001))
+            if jobValue == 1000: 
+                balance = int(balance-betAmount)
+                print(f"\nYou did a horrible job! You lost {betAmount}.\n")
+            else: 
+                balance = int(balance+(jobValue+(betAmount/20)))
+                print(f"\nYou have earned {int(jobValue+(betAmount/20))} from working!\n")
+            
         else:
             gameType = input("Invalid Input! Please select a game mode by number: ")
     
