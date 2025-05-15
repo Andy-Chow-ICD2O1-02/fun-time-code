@@ -105,8 +105,8 @@ while gameplay == True:
                 balance = int(balance-betAmount)
                 print(f"\nYou did a horrible job! You lost {betAmount}.\n")
             else: 
-                balance = int(balance+(jobValue+(betAmount/20)))
-                print(f"\nYou have earned {int(jobValue+(betAmount/20))} from working!\n")
+                balance = int(balance+(jobValue/20))
+                print(f"\nYou have earned {int(jobValue/20)} from working a {jobValue} hour shift!\n")
             
         else:
             gameType = input("Invalid Input! Please select a game mode by number: ")
