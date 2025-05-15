@@ -8,7 +8,7 @@
 import random 
 
 gameplay = True 
-balance = 1000
+balance = int(1000)
 
 print("Hello! Welcome to the Very Fair Casino!")
 
@@ -53,18 +53,18 @@ while gameplay == True:
         
             if headsOrTails.lower() == "heads":
                 if coinValue == 1:
-                    balance = (balance-betAmount)+(betAmount*1.5)
+                    balance = int((balance-betAmount)+(betAmount*1.5))
                     print (f"You Won! Your balance is now {balance}.\n")
                 else: 
-                    balance = balance-betAmount  
+                    balance = int(balance-betAmount)
                     print (f"You lost. Your balance is now {balance}.\n")
                 
             if headsOrTails.lower() == "tails":
                 if coinValue == 2:
-                    balance = (balance-betAmount)+(betAmount*1.5) 
+                    balance = int((balance-betAmount)+(betAmount*1.5))
                     print (f"You Won! Your balance is now {balance}.\n")
                 else: 
-                    balance = balance-betAmount
+                    balance = int(balance-betAmount)
                     print (f"You lost. Your balance is now {balance}.\n")
         
         elif gameType == "2": 
@@ -73,13 +73,13 @@ while gameplay == True:
             
             slotValue = random.randrange(1,101)
             if slotValue == 1:
-                balance = (balance-betAmount)+(betAmount*10000000000000000)
+                balance = int((balance-betAmount)+(betAmount*10000000000000000))
                 print(f"\nYou hit the big jackpot! Your balance is now {balance}.\n")
             elif slotValue >= 2 and slotValue <= 10:
-                balance = (balance-betAmount)+(betAmount*2)
+                balance = int((balance-betAmount)+(betAmount*2))
                 print(f"\nyou hit the small jackpot! Your balance is now {balance}.\n")
             else:
-                balance = balance-betAmount
+                balance = int(balance-betAmount)
                 print(f"\nYou lost. Your balance is now {balance}.\n")
     
         elif gameType == "3":
@@ -88,13 +88,13 @@ while gameplay == True:
             
             slotValue2 = random.randrange(1,10000000000000000000001)
             if slotValue2 == 1:
-                balance = (balance-betAmount)+(betAmount*1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+                balance = int((balance-betAmount)+(betAmount*1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000))
                 print(f"\nYou hit the big jackpot! Your balance is now {balance}.\n")
             elif slotValue2 >= 2 and slotValue2 <= 10:
-                balance = (balance-betAmount)+(betAmount*20000000)
+                balance = int((balance-betAmount)+(betAmount*20000000))
                 print(f"\nYou hit the small jackpot! Your balance is now {balance}.\n")
             else:
-                balance = balance-betAmount
+                balance = int(balance-betAmount)
                 print(f"\nYou lost. Your balance is now {balance}.\n")
                 
         else:
